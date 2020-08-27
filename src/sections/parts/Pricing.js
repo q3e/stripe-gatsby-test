@@ -142,6 +142,21 @@ const Pricing = () => {
     }
   }
 
+  if (loading) {
+    return (
+      <div
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: '100vh' }}
+      >
+        <Spinner
+          style={{ height: '6rem', width: '6rem' }}
+          size="lg"
+          animation="border"
+        />
+      </div>
+    )
+  }
+
   return (
     <>
       {/* <!-- Pricing section --> */}
