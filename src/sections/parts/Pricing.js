@@ -132,8 +132,8 @@ const Pricing = () => {
     const { error } = await stripe.redirectToCheckout({
       mode: 'subscription',
       lineItems: [{ price: pricingTier, quantity: 1 }],
-      successUrl: `http://localhost:8000/payment-success/`,
-      cancelUrl: `http://localhost:8000/paymen-cancel`,
+      successUrl: `${window.location.origin}/payment-success/`,
+      cancelUrl: `${window.location.origin}/payment-cancel`,
     })
 
     if (error) {
